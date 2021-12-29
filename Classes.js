@@ -18,7 +18,31 @@
  */
 class Person {
   // continue the code here
+  constructor(firstName,lastName,gender,birthyear,){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.gender = gender;
+    this.birthyear = birthyear;
+    this.interests = [];
+  }
+  printName = () => {
+ console.log(`the full Name is ${this.firstName} ${this.lastName}`);
+  };
+
+  calculateAge = (age) =>{
+    age = 2021 - this.birthyear;
+  };
+  addInterest = (interest) =>{
+    this.interests.push("interest");
+    return this.interests;
+  }
+
 }
+const actor1 = new Person("Ahmed","Dashti","Male",1984);
+
+const actor2 = new Person("Abdulrahman","Alkandry","Male",1996);
+
+const actor3 = new Person("Fahad","Jweehel","Male",1996);
 
 /** (Question 2): (15000 Points)
  * 1. Write a class `Movie`, give it the following properties
@@ -43,6 +67,34 @@ class Person {
 
 class Movie {
   // continue the code here
+  constructor(title,duration,genre){
+    this.title = title;
+    this.duration = duration;
+    this.genre = genre;
+    this.rating=[];
+  }
+  
+  rate = (num) => {
+    // return push.this.rating((num1) => num1 > 10 && num1 < 0); 
+    if (rating >=0 && rating <= 10){
+      this.rating.push(num);
+    }
+    else{
+      console.log("rating is wrong");
+    }
+  };
+
+  averageRating =() =>{
+    // for (let i = 0; i < this.rating.length; i++) {
+    //   sum +=this.rating[i];
+    //   return sum;
+    // }
+    // sum= sum/this.rating.length;
+    constsum = this.rating.reduce(((prev, curr) => prev +curr));
+    return sum /this.rating.length
+
+    //this.rating.length   rate counts
+  }
 }
 
 /** (Question 3): (1000 Points)
@@ -55,3 +107,18 @@ class Movie {
  */
 
 // write the class here
+class Actor extends Person{
+  // constructor(firstName,lastName,gender,birthyear,interests){
+    // super(movies);
+    // this.movies = movies;  
+    // movies[];
+  // }
+
+  // addMovie = (movie) =>{
+    // this.movies.push(movie);
+  // }
+movies = [];
+addMovie = () =>{
+this.movies.push(movie);
+}
+}
